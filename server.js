@@ -16,7 +16,7 @@ const app = express();
 const saltRounds = 6;
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://live-chat-fd.s3-website.eu-north-1.amazonaws.com "],
+    origin: ["http://localhost:5173", "http://live-chat-fd.s3-website.eu-north-1.amazonaws.com"],
     methods: ["GET", "POST"],
   })
 );
@@ -26,7 +26,7 @@ env.config();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://live-chat-fd.s3-website.eu-north-1.amazonaws.com "],
+    origin: ["http://localhost:5173", "http://live-chat-fd.s3-website.eu-north-1.amazonaws.com"],
     methods: ["GET", "POST"],
   },
 });
@@ -420,3 +420,4 @@ function checkRegisterPassword(password, reppeatedPassword) {
     return true;
   }
 }
+
